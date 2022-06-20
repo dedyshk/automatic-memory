@@ -3,11 +3,19 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <h1>маршрутизация в Angular</h1>
-    <router-outlet></router-outlet>
+  <div [ngClass]="{verdanaFont:true}" ngClass="{asd:true}">
+    <a routerLink="">Главная </a>
+    <a routerLink="/about">О нас</a>
+  
+  <router-outlet></router-outlet>
+  </div>
+    
   `,
-  styleUrls: ['./app.component.css']
+  styles: [`
+  .verdanaFont { font-weight: normal; font-size:35px; margin:15px; text-align:right; background:whitesmoke;height:auto;}
+  
+  `]
 })
 export class AppComponent {
-  title = 'MyProjest1';
+  title = 'Home page';
 }
